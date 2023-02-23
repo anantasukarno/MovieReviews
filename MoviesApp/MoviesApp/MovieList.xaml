@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesApp.MovieList"
+             Style="{StaticResource PageStyle}"
+             Title="Movie List">
+
+    <ContentPage.Content>
+        <CollectionView x:Name="movieListView"
+                ItemsLayout="VerticalGrid, 2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="20, 20, 20, 20">
+                        <Frame CornerRadius="15"
+                               Padding="0">
+                            <Image x:Name="backgroundImage"
+                                   Source="{Binding poster_path}" 
+                                   MinimumWidthRequest="200"
+                                   HorizontalOptions="Center" 
+                                   VerticalOptions="Center" 
+                                   Aspect="AspectFill"/>
+                        </Frame>
+                        <StackLayout HeightRequest="120">
+                            <Label Margin="10, 0, 10, 0" 
+                                   TextColor="white" 
+                                   Text="{Binding title}" 
+                                   FontSize="Large" 
+                                   FontAttributes="Bold"/>
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="10, 0, 10, 0">
+                                <Image Source="starrating.png" 
+                                        WidthRequest="15" 
+                                        HorizontalOptions="Start"></Image>
+                                <Label Text="{Binding vote_average}"
+                                       FontSize="Medium"
+                                       TextColor="White"></Label>
+                            </StackLayout>
+                            <Frame CornerRadius="15"
+                               Padding="0"
+                                   VerticalOptions="EndAndExpand">
+                                <Button Text="Preview"
+                                        TextColor="#141a31"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        VerticalOptions="End"
+                                        BackgroundColor="#00FFFF"
+                                        Clicked="Button_Preview_Clicked"
+                                        CommandParameter="{Binding id}"
+                                        ></Button>
+                            </Frame>
+                            
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

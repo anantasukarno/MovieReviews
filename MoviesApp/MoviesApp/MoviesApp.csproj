@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\PoppinsBlack.ttf" />
+    <None Remove="Fonts\PoppinsBold.ttf" />
+    <None Remove="Fonts\PoppinsExtraBold.ttf" />
+    <None Remove="Fonts\PoppinsMedium.ttf" />
+    <None Remove="Fonts\PoppinsRegular.ttf" />
+    <None Remove="Image\starrating.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\PoppinsBlack.ttf" />
+    <EmbeddedResource Include="Fonts\PoppinsBold.ttf" />
+    <EmbeddedResource Include="Fonts\PoppinsExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\PoppinsMedium.ttf" />
+    <EmbeddedResource Include="Fonts\PoppinsRegular.ttf" />
+    <EmbeddedResource Include="Image\starrating.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Genre.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MovieDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MovieList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Trailer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
