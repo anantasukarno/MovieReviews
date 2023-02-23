@@ -12,7 +12,8 @@
             <Image x:Name="backdrop"
                    HorizontalOptions="Center" 
                    VerticalOptions="Center" 
-                   Aspect="AspectFill"/>
+                   Aspect="AspectFill"
+                   HeightRequest="250"/>
             <StackLayout Margin="20, 10, 20, 10">
             <StackLayout Orientation="Horizontal" >
                 <Frame CornerRadius="15"
@@ -163,7 +164,7 @@
                                FontFamily="Poppins"></Label>
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Margin="0, 50, 0, 20">
+                <StackLayout Margin="0, 50, 0, 50">
                         <Button Text="Watch Trailer and Review"
                                 BackgroundColor="#00FFFF"
                                 Clicked="Button_Trailer_Clicked"

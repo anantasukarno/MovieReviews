@@ -8,6 +8,7 @@
     <ContentPage.Content>
         <CollectionView x:Name="movieListView"
                 ItemsLayout="VerticalGrid, 2">
+
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="20, 20, 20, 20">

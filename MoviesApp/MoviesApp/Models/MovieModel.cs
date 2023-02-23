@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MoviesApp.Models
 {
-    class MovieModel
+    public class MovieModel
     {
         public bool adult { get; set; }
         public string backdrop_path { get; set; }
